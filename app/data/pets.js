@@ -1,52 +1,56 @@
 
-let puppy = {  "name":"puppy",
+let pets = [{  "name":"puppy",
     "photo":"./images/puppy.png",
     "scores":[
-        0,
+        //18
+        1,
         5,
-        0,
+        1,
         5,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
       ]
-  }
-  let kitten = {  "name":"kitten",
+  },
+ {  "name":"kitten",
     "photo":"./images/kitten.jpg",
     "scores":[
-        0,
-        0,
+        //26
+        2,
+        2,
         5,
-        0,
-        0,
-        0,
+        2,
+        2,
+        2,
         5,
-        0,
-        0,
-        0
+        2,
+        2,
+        2
       ]
-  }
-  let rock = {  "name":"rock",
+  },
+ {  "name":"rock",
     "photo":"./images/petrock.jpg",
     "scores":[
-        0,
-        0,
-        0,
-        0,
+        //33
+        3,
+        3,
+        3,
+        3,
         5,
-        0,
-        0,
-        0,
-        0,
+        3,
+        3,
+        3,
+        3,
         5
       ]
-  }
-  let parakeet = {  "name":"parakeet",
+  },
+  {  "name":"parakeet",
     "photo":"./images/parakeet.jpeg",
     "scores":[
+        //10
         5,
         0,
         0,
@@ -58,31 +62,50 @@ let puppy = {  "name":"puppy",
         0,
         0
       ]
-  }
-  let fish = {  "name":"fish",
+  },
+  {  "name":"fish",
     "photo":"./images/fish.jpg",
     "scores":[
-        0,
-        0,
-        0,
-        0,
-        0,
+        //40
+        4,
+        4,
+        4,
+        4,
+        4,
         5,
-        0,
-        0,
+        4,
+        4,
         5,
         0
       ]
-  }
+  }];
 
-  let userArray = [];
+  module.exports = petsArray;
 
-  let totalDifference = function(userArray){
+//   let userArray = [];
 
-userArray.reduce(add, 0);
+//   let totalDifference = function(userArray){
 
-function add(a, b) {
-    return a + b;
-}
+// userArray.reduce(add, 0);
 
-  }
+// function add(a, b) {
+//     return a + b;
+// }
+
+// if (userArray === 18 || 13){
+//     return puppy;
+// }
+// if (userArray === 26 || 21){
+//     return kitten;
+// }
+// if (userArray === 33 || 28){
+//     return rock;
+// }
+// if (userArray === 10 || 5){
+//     return parakeet;
+// }
+// if (userArray === 40 || 35){
+//     return fish;
+// }
+//  
+
