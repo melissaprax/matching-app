@@ -3,7 +3,7 @@
 // We are linking our routes to a series of "data" sources.
 // ===============================================================================
 
-var petsData = require("../data/pets");
+let petsData = require("../data/pets");
 
 // ===============================================================================
 // ROUTING
@@ -29,5 +29,34 @@ module.exports = function(app) {
       res.json(true);
     }
   });
+
+  let userResponses = userInput.scores;
+		// console.log('userResponses = ' + userResponses);
+
+		// for pet match
+		let name = '';
+		let photo = '';
+		let totalDifference = 10000; 
+
+		for (let i = 0; i < pets.length; i++) {
+
+			let diff = 0;
+			for (let j = 0; j < userResponses.length; j++) {
+				diff += Math.abs(pets[i].scores[j] - userResponses[j]);
+			}
+
+			if (diff < totalDifference) {
+				
+
+				totalDifference = diff;
+				name = pets[i].name;
+				photo = pets[i].photo;
+			}
+		}
+
+		// Add new user
+		pets.push(userInput);
+
+		res.json({status: 'OK', name: name, photo: photo});
 
 }
