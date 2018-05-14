@@ -74,3 +74,15 @@ let puppy = {  "name":"puppy",
         0
       ]
   }
+
+  let userArray = [];
+
+  let totalDifference = function(userArray){
+
+userArray.reduce(add, 0);
+
+function add(a, b) {
+    return a + b;
+}
+
+  }
